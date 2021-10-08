@@ -102,3 +102,18 @@ odd_negative_numbers
 # 17 Make a variable named numbers_plus_5. In it, return a list containing each number plus five.
 number_plus_5 = [number +5 for number in numbers ]
 number_plus_5 
+
+# BONUS make a variable named "promes" that is a list containing the phone numbers in numbers liust. HINT you may eant to make or find helper function that determines if a given number is prime or not 
+
+def is_prime (number):
+        ''' return True of False if the inuput is number ''' 
+        if type(number) != int:
+            return False
+        if number <=0:
+            return False
+        if number ==1:
+            return True 
+
+    
+is_prime(1)
+
