@@ -70,9 +70,68 @@ that accepts a string and returns a string with all the vowels removed.'''
 
 def remove_vowels(words):
     vowels = ['a','e','i','o','u']
-    result =[ word in words if words.lower() not in vowels]
-    result = ''.join(result)
-    print(result)
+    result =[ word for word in words if word.lower() not in vowels]
+    new_result= ''.join(result)
+    print(new_result)
 
-remove_vowels('apple')
+words= 'i hate typing things'
+remove_vowels(words)
+
+''' 10. Define a function named normalize_name. It should accept a string and return a valid python identifier, that is:
+anything that is not a valid python identifier should be removed
+leading and trailing whitespace should be removed
+everything should be lowercase
+spaces should be replaced with underscores
+for example:
+Name will become name
+First Name will become first_name
+% Completed will become completed'''
+
+def noramlize_name(name):
+    
+    
+    # remove leading and trailing whitespace( use.strip)
+    # everything should be in lower (use.lower)
+    # replace space with underscore. replace ('', '_')
+    # remove % 
+    
+    
+    new_name = ' '
+    for character in new_name:
+        if character.lower() in character == ' ':
+            new_name += character.lower()
+    new_name = new_name.strip()
+    for character in new_name:
+        if character in new_name:
+            if character == '':
+                new_name = new_name.replace('', '_')
+    
+    return new_name
+    
+    
+noramlize_name('Name')
+noramlize_name('First Name')
+noramlize_name('% Completed')
+
+''' 11. Write a function named cumulative_sum that accepts a list of numbers and returns a list that is the cumulative sum of the numbers in the list.
+cumulative_sum([1, 1, 1]) returns [1, 2, 3]
+cumulative_sum([1, 2, 3, 4]) returns [1, 3, 6, 10]'''
+
+def cumulative_sum(new_list):
+    
+    new_cumulative_list = []
+    
+    length = len(new_list)
+    
+    new_cumulative_list = [sum(new_list[0:i:1]) for i in range (0, length +1 )]
+    
+    return new_cumulative_list[1:]
+
+
+new_list= [1,1,1]
+new_list = [1,2,3,4]
+
+
+print(cumulative_sum(new_list))
+
 
